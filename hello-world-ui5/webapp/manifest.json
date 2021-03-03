@@ -71,7 +71,7 @@
         "async": true,
         "viewPath": "eggo.helloworldui5.view",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "main",
         "clearControlAggregation": false
       },
       "routes": [
