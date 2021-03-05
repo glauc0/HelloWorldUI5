@@ -38,8 +38,14 @@ sap.ui.define(
         }
       },
       btnCloseFragmentClick: function () {
-		  this.byId("fragmentDialog").close();
-	  },
+        this.byId("fragmentDialog").close();
+      },
+      btnAcceptClick: function () {
+        this.btnHelloClick();
+      },
+      btnRejectClick: function () {
+        this.btnFragmentClick();
+      },
     });
   }
 );

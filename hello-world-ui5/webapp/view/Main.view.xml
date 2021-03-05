@@ -1,47 +1,25 @@
-<mvc:View xmlns:control="sap.gantt.control"
-    controllerName="eggo.helloworldui5.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
-	<Shell 
-		id="shell">
-		<App 
-			id="main">
+<mvc:View xmlns:control="sap.gantt.control" controllerName="eggo.helloworldui5.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="main">
 			<pages>
-				<Page 
-					id="page" 
-					title="{i18n>title}">
+				<Page id="page" title="{i18n>title}">
 					<content>
-						<Panel 
-							id="helloPanelTitle"
-							headerText="{i18n>helloPanelTitle}"
-						    class="sapUiResposiveMargin"
-							width="auto" >
+						<Panel id="helloPanelTitle" headerText="{i18n>helloPanelTitle}" class="sapUiResposiveMargin" width="auto">
 							<content>
-								<Text
-									id="textHello"
-									text="{i18n>textHello}"
-									class="sapUiSmallMargin"
-									width="auto" />
-								<Input 
-									id="helloLabelInput"
-									valueLiveUpdate="true"
-									width="60%" />
-								<Button
-									id="btnHello"
-									text="{i18n>btnHello}"
-									width="auto"
-									press="btnHelloClick" />
-								<Button
-									id="btnFragment"
-									icon="sap-icon://world"
-									text="{i18n>btnFragment}"
-									width="auto"
-									press="btnFragmentClick" />
+								<Text id="textHello" text="{i18n>textHello}" class="sapUiSmallMargin" width="auto" />
+								<Input id="helloLabelInput" valueLiveUpdate="true" width="60%" />
+								<Button id="btnHello" text="{i18n>btnHello}" width="auto" press="btnHelloClick" />
+								<Button id="btnFragment" icon="sap-icon://world" text="{i18n>btnFragment}" width="auto" press="btnFragmentClick" />
 							</content>
-						</Panel>							
+						</Panel>
 					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer />
+							<Button text="{i18n>btnAccept}" type="Accept" press="btnAcceptClick" />
+							<Button text="{i18n>btnReject}" type="Reject" press="btnRejectClick" />
+						</OverflowToolbar>
+					</footer>
 				</Page>
 			</pages>
 		</App>
