@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"eggo/helloworldui5/model/models"
-], function (UIComponent, Device, models) {
+	"eggo/helloworldui5/model/models",
+	"./controller/BtnFragment"
+], function (UIComponent, Device, models, BtnFragment) {
 	"use strict";
 
 	return UIComponent.extend("eggo.helloworldui5.Component", {
@@ -25,6 +26,18 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+
+			// set dialog
+			this._btnFragment = new BtnFragment(this.getRootControl());
+		},
+
+		exit: function(){
+			this._btnFragment.destroy();
+			delete this._btnFragment;
+		},
+
+		openFragment: function(){
+			this._btnFragment.open();
 		}
 	});
 });
