@@ -44,7 +44,6 @@ sap.ui.define(
         var oBundle = this.getView().getModel("i18n").getResourceBundle();
         var lvText = oBundle.getText("msgW002");
         MessageToast.show(lvText);
-        this.getView().byId("helloLabelInput").setValue("");
       },
       btnRejectClick: function () {
 
