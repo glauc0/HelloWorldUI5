@@ -12,6 +12,11 @@
 								<Button id="btnFragment" icon="sap-icon://world" text="{i18n>btnFragment}" width="auto" press="btnFragmentClick" />
 							</content>
 						</Panel>
+						<Panel>
+							<content>
+								<Button id="btnMySql" icon="sap-icon://database" width="100%" press="btnMySqlClick"></Button>
+							</content>
+						</Panel>
 					</content>
 					<footer>
 						<OverflowToolbar>

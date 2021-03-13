@@ -52,6 +52,10 @@ sap.ui.define(
         MessageToast.show(lvText);
         this.getView().byId("helloLabelInput").setValue("");
       },
+      btnMySqlClick: function(oEvent){
+        var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        oRouter.navTo("MySql");
+      }
     });
   }
 );

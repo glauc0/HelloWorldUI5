@@ -79,6 +79,11 @@
           "name": "RouteMain",
           "pattern": "RouteMain",
           "target": ["TargetMain"]
+        },
+        {
+          "pattern": "MySql",
+          "name": "MySql",
+          "target":["MySql"]
         }
       ],
       "targets": {
@@ -88,6 +93,13 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
+        },
+        "MySql": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MySql",
+          "viewName": "MySql"
         }
       }
     }

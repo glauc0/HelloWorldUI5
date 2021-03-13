@@ -1,0 +1,31 @@
+<mvc:View xmlns:control="sap.gantt.control" controllerName="eggo.helloworldui5.controller.MySql"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m">
+	<Shell id="shell">
+		<App id="mysql">
+			<pages>
+				<Page id="page" title="{i18n>title}" class="sapUiContentPadding">
+					<content>
+						<Panel id="mysqlPanelTitle" headerText="{i18n>mysqlPanelTitle}" class="sapUiResposiveMargin" width="auto">
+							<m:content>
+                                
+							</m:content>
+						</Panel>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer />
+							<Button text="{i18n>btnAccept}" type="Accept" press="btnAcceptClick" />
+							<Button text="{i18n>btnReject}" type="Reject" press="btnRejectClick" />
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
