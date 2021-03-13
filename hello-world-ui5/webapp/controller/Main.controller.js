@@ -41,10 +41,16 @@ sap.ui.define(
         this.byId("fragmentDialog").close();
       },
       btnAcceptClick: function () {
-        this.btnHelloClick();
+        var oBundle = this.getView().getModel("i18n").getResourceBundle();
+        var lvText = oBundle.getText("msgW002");
+        MessageToast.show(lvText);
       },
       btnRejectClick: function () {
-        this.btnFragmentClick();
+
+        var oBundle = this.getView().getModel("i18n").getResourceBundle();
+        var lvText = oBundle.getText("msgW003");
+        MessageToast.show(lvText);
+        this.getView().byId("helloLabelInput").setValue("");
       },
     });
   }
