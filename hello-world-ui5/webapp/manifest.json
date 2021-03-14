@@ -76,14 +76,14 @@
       },
       "routes": [
         {
-          "name": "RouteMain",
+          "name": "Main",
           "pattern": "RouteMain",
           "target": ["TargetMain"]
         },
         {
-          "pattern": "MySql",
           "name": "MySql",
-          "target":["MySql"]
+          "pattern": "RouteMySql",
+          "target":["TargetMySql"]
         }
       ],
       "targets": {
@@ -91,14 +91,14 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Main",
+          "viewId": "mainTargetId",
           "viewName": "Main"
         },
-        "MySql": {
+        "TargetMySql": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "MySql",
+          "viewId": "mySqlTargetId",
           "viewName": "MySql"
         }
       }

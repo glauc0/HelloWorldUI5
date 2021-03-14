@@ -1,4 +1,6 @@
-<mvc:View xmlns:control="sap.gantt.control" controllerName="eggo.helloworldui5.controller.MySql"
+<mvc:View 
+    xmlns:control="sap.gantt.control" 
+    controllerName="eggo.helloworldui5.controller.MySql"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc" 
     xmlns="sap.m"
@@ -6,22 +8,60 @@
     xmlns:u="sap.ui.unified"
     xmlns:c="sap.ui.core"
     xmlns:m="sap.m">
-	<Shell id="shell">
-		<App id="mysql">
+	<Shell 
+        id="shellMySql">
+		<App 
+            id="mysql">
 			<pages>
-				<Page id="page" title="{i18n>title}" class="sapUiContentPadding">
+				<Page 
+                    id="pageMySql"
+                    title="{i18n>mySqlViewtitle}"
+                    showNavButton="true"
+                    navButtonPress="btnGoBackMain">
 					<content>
-						<Panel id="mysqlPanelTitle" headerText="{i18n>mysqlPanelTitle}" class="sapUiResposiveMargin" width="auto">
-							<m:content>
-                                
-							</m:content>
+						<Panel 
+                            id="mysqlPanelTitle" 
+                            headerText="{i18n>mysqlPanelTitle}" 
+                            class="sapUiResposiveMargin" 
+                            width="auto">
+                                <m:content>
+                                    <t:Table
+                                        id="tableMySql"
+                                        selectionMode="MultiToggle"
+                                        visibleRowCount="10"
+                                        enableSelectAll="false"
+                                        rows="{/Orders}"
+                                        threshold="15"
+                                        enableBusyIndicator="true"
+                                        columns="{
+                                            path: 'meta>/dataServices/schema/[${namespace}===\'CData\']/entityType/[${name}===\'Orders\']/property',
+                                            factory: '.columnFactory'
+                                            }"> 
+                                        <t:footer>
+                                        <m:Toolbar>
+                                        <m:Title text="MySQL Order"></m:Title>
+                                        </m:Toolbar>
+                                        </t:footer>
+                                        <t:noData>
+                                        <m:BusyIndicator class="sapUiMediumMargin"/>
+                                        </t:noData>
+                                    </t:Table>
+                                </m:content>
 						</Panel>
 					</content>
 					<footer>
 						<OverflowToolbar>
 							<ToolbarSpacer />
-							<Button text="{i18n>btnAccept}" type="Accept" press="btnAcceptClick" />
-							<Button text="{i18n>btnReject}" type="Reject" press="btnRejectClick" />
+							<Button 
+                                id="btnAcceptMySql"
+                                text="{i18n>btnAccept}" 
+                                type="Accept" 
+                                press="btnAcceptClick" />
+							<Button 
+                                id="btnRejectMySql"
+                                text="{i18n>btnReject}"
+                                type="Reject" 
+                                press="btnRejectClick" />
 						</OverflowToolbar>
 					</footer>
 				</Page>
